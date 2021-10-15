@@ -109,6 +109,13 @@ searchBtn.addEventListener("click", function (e) {
 });
 
 const init = function () {
+  fetch(
+          `http://api.weatherapi.com/v1/forecast.json?key=bcc1c90b3a0844779e155504211210&q=delhi&days=7&aqi=yes&alerts=yes`
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            displayUI(data);
+          });
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       function (position) {
