@@ -4,7 +4,7 @@ const searchBtn = document.querySelector(".inputSearch");
 const gpsBtn = document.querySelector(".gps");
 
 const errorFunction = function () {
-  alert("Error");
+  alert("Geolocation is not enabled. Please enable to get accurate weather updates.");
 };
 
 //Reverse Geocoding
